@@ -11,7 +11,7 @@ function Posts() {
 
 
     useEffect(() => {
-        dispatch(getDatarequest())
+       dispatch(getDatarequest('hello i am param '))
         
     },[])
 
