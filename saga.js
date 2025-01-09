@@ -3,7 +3,9 @@ import { getDatarequest, requestFullfilled, requestError } from './PostSlice'
 
 const Api = 'https://jsonplaceholder.typicode.com/posts'
 
-function* fetchData() {
+function* fetchData(action) {
+     const param = action.payload
+    console.log(param);
     const res = yield call(fetch, Api)
 
     const data = yield res.json()
